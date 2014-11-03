@@ -1,8 +1,10 @@
-How I Learn Best, and Why DBC Suits Me Well
+#How I Learn Best, and Why DBC Suits Me Well
 
-Inner Thoughts about DBC
+##Inner Thoughts about DBC
 
 11/2/14
+
+=========================================================
 
 Upon watching this video (http://vimeo.com/85001014), I am even more convinced in my initial beliefs that DBC provides a unique
 experience for its students. My pubic school experience was homogenous throughout an entire 12 years: walk into class at 8 AM, listen
