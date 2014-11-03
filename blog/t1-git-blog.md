@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+```html
 
 <html>
 	<head>
@@ -30,6 +30,7 @@
 			.blogPara {
 				text-indent: 10px;
 				margin-bottom: 5px;
+				text-align: justify;
 			}
 
 		</style>
@@ -64,6 +65,8 @@
 				store your files in a backup in case something goes wrong with your hardrive, and GitHub can also
 				function as a backup.
 			</p>
-
-		</body>
+		</div>
+	</body>
 </html>
+
+```
