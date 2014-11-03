@@ -1,12 +1,12 @@
-Jamal's Blog
+#A Few Things to Know About Version Control and GitHub
 
-A Squirrel in San Fran's DBC
+##Essentials to Programming
 
+11/2/14
 
-My First Blog Post
-(Part of DBC Week-1 Curriculum)
-11-2-14
+====================================================
 
+## What are the benefits of version control?
 
 Version control is a must-have tool for nearly any programming project. It gives
 developers an orderly history of their source code, granting them the freedom to revert any (bad)
@@ -17,6 +17,9 @@ you would be able press undo anytime you make an mistake, but without version co
 essay over from the very beginning. The right choice is obviously the former.
 
 
+====================================================
+
+## How does git help you keep track of changes? 
 
 Git helps keep track of changes by saving our source code each time we "commit." A 
 commit is essentially the process of creating a restore point of our source code for Git, so that we may 
@@ -24,7 +27,9 @@ view or revert back to the source code if we need to. A log of each commit, alon
 message or description about it, is stored and the developer has free access to it.
 
 
+===================================================
 
+## Why use GitHub to store your code?
 
 GitHub is a great place to store code because it allows others to see and modify it;
 that is one reason why GitHub is an essential collaboration tool. In addition, it is a good idea to
