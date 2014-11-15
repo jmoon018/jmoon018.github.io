@@ -1,52 +1,75 @@
-div.header{
-text-align:center;
- 
+* {margin:0; padding:0; }
+
+body {
+	background-image: url("https://jmoon018.github.io/images/home_background.jpg");
+	/*background-color: black;*/
+	color:white;
 }
- 
- 
- 
-div.link_bar{
-text-align:center;
-margin-top: 15px;
-font-size: 10px;
-margin-left:-27px;
- 
+
+a { color: lightblue;}
+h1 { 
+	text-align: center;
+	color: white;
+	font-size:5em;
 }
- 
- 
-ul.horizontal_top{
-list-style-type:none;
-display:inline;
- 
+
+.header {
+	width: 600px;
+	margin-left:auto;
+	margin-right:auto;
+	display: table;
 }
- 
- 
-ul.horizontal_top li {
-display: inline;
+
+.subHeader {
+	text-align:center;
+	color: white;
+	margin-top:15px;
+	font-size: 1.8em;
 }
- 
- 
+
+.headerMenu {
+	margin-top:20px;
+	list-style-type: none;
+	text-align: center;
+}
+
+.headerMenu li {
+	padding: 2px 10px;
+	text-align: center;
+	display: inline;
+	font-size: 1.3em;
+}
+
+.homeBigImg {
+}
+
+.homeEnterP {
+	font-size: 3em;
+	color: white;
+	margin-top: 160;
+	text-align: center;
+	font-weight: bold;
+}
+
+
  
 div.left_bar{
 float:left;
 margin-right: 15px;
-height:100px;
- 
 }
  
 ul.vertical_left{
 list-style-type:none;
-
 }
  
-ul.vertical_left li{ margin-top: 5px;}
+ .vertical_left li { margin-top:5px; }
+
  
 div.main_body{
 display:table;
 width:500px;
 margin-left:auto;
 margin-right:auto;
- 
 }
  
  
@@ -56,14 +79,14 @@ margin-right: 15px;
 width: 50px;
 height: 50px;}
  
- 
- 
+
 div.footer{
-text-align:center;}
- 
-div.vert_bar{
-margin-left:50%;
-background-color:#000000;
-width:3px;
-height:4000px;
-position:absolute;}
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height:50px;
+	background-color: black;
+	padding:15px;
+	box-sizing: border-box;
+	text-align:center;
+}
