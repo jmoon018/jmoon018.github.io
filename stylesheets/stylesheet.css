@@ -1,6 +1,7 @@
 body {
-	background-image: url("images/home_background.jpg");
-	background-color: black;
+	background-image: url("http://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg");
+	/*background-color: black;*/
+	color:white;
 }
 h1 { 
 	text-align: center;
