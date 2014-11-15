@@ -1,6 +1,6 @@
 body {
 	background-image: url("images/home_background.jpg");
-	background-repeat: repeat;
+	background-color: black;
 }
 h1 { 
 	text-align: center;
@@ -37,9 +37,11 @@ h1 {
 }
 
 .homeEnterP {
-	font-size: 2em;
+	font-size: 4em;
 	color: white;
 	margin-top: 100px;
+	text-align: center;
+	font-style: bold;
 }
 
 div.footer{
