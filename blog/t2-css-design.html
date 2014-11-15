@@ -1,31 +1,24 @@
-<!DOCTYPE html>
 <html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
 
-<head>
-	<title>
-		T2-CSS-Design
-	</title>
-	<link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
 
-</head>
 
-<body>
-	<div class="header">
-		<h1>
-			<a href="http://jmoon018.github.io/">web page title</a></h1>
-		</div>
-
-		<div class="link_bar">
-			<ul class = "horizontal_top">
-				<li><a href = "#" >Home</a></li>
-				<li><a href = "#" >About Me</a></li>
-				<li><a href = "#" >Portfolio</a></li>
-				<li><a href = "#" >Blog</a></li>
-				<li><a href = "#" >Contacts</a></li>
-			</ul>
-		</div>
-
-		<div class = "left_bar">
+      	<div class = "left_bar">
 			<ul class ="vertical_left">
 				<li><a href = "#" >Facebook link</a></li>
 				<li><a href = "#" >Twitter</a></li>
@@ -48,20 +41,23 @@
 				and websites would look like a clustered pile of poop.
 			</p>
 
-			<p>Before I continue, there are a couple things you should know. Each element (text, image, etc)
+			<p>
+				Before I continue, there are a couple things you should know. Each element (text, image, etc)
 				on websites have a width and height property. These give 2D, box-like "boundaries" to the elements
 				and will be important when working with MBPs. MBPs can also be directly added to the
 				the top, left, right, or bottom of an element.
 			</p>
 
-			<p>Margins are simple. When you add a margin to an element, adjacent elements
+			<p>
+				Margins are simple. When you add a margin to an element, adjacent elements
 				are pushed away by the amount you specified. For example, if I have element1 to the left
 				of element2, and they are next to each other, adding "margin-right:10px;" to element1 will
 				push element2 away from element1 (and thus to the right) by 10px. The same effect can be
 				achieved by adding "margin-left:10px;" to element2 (element2 pushes itself away). 
 			</p>
 
-			<p>Paddings mostly only affect the element that has the padding. Rather than pushing other elements
+			<p>
+				Paddings mostly only affect the element that has the padding. Rather than pushing other elements
 				away like margins, a padding is like an "inner-margin", and it'll push the content of the element
 				within itself. Kinda weird. For example, if you have a rectangle, called box1, that spans
 				the width of your entire screen and has text that says "Hello world!" at the very left, you can
@@ -70,15 +66,28 @@
 				So margins push other elements, and paddings push stuff within an element
 			</p>
 
-			<p>Borders can extend the boundaries of an element and make your element look fancy. You can for example
+			<p>
+				Borders can extend the boundaries of an element and make your element look fancy. You can for example
 				put a border around an element, and lines (in the shape of a box) will appear and encompass the 
 				element.  You can change the colors, make the border width big and fat, or really tiny. It's just a border.
 				The thing to note is that when you add a border, it must have a width, and this width adds to the 
 				element's current width. So for example, if an element is 50x50 pixels, and I add a border with 1px width,
 				the new element size is 52 x 52px; the border goes on each on the top and bottom once, adding 2px, and
 				the same applies to the left/right.
+			</p>
 		</div>
 
+      	
+      	<p class="homeEnterP">
+      		C++/Java Programmer<br>
+      		Game Designer<br>
+      		Web Developer (soon™)
+      	</p>
 
-	</body>
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
 </html>
