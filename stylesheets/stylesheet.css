@@ -1,5 +1,5 @@
 body {
-	background-image: url("http://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg");
+	background-image: url("https://jmoon018.github.io/images/home_background.jpg");
 	/*background-color: black;*/
 	color:white;
 }
@@ -46,5 +46,7 @@ h1 {
 }
 
 div.footer{
+	position: absolute;
+	bottom: 0
 	text-align:center;
 }
