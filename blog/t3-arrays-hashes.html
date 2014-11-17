@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="../stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
+
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
+
+
+      	<div class="center_part">
+	      	<div class = "left_bar">
+				<ul class ="vertical_left">
+
+					<li><a href = "https://twitter.com/jmoon018" >Twitter</a></li>
+					<li><a href = "https://github.com/jmoon018" >Github link</a></li>
+					<li><a href = "https://linkedin.com/in/jamalmoon/" >LinkedIn</a></li>
+				</ul>
+			</div>
+
+			<div class = "main_body" >
+				<h2>Arrays vs. Hashes -- What are they? Why do I care?</h2>
+
+				<p>
+					There are many problems in the computer science field that are heavily
+					researched and studied, and one of them is finding the optimal way
+					to store and retrieve data. This is a very important problem because our
+					computers would have incredibly poor performance if we didn't have efficient
+					ways of organizing static data --- think about it, when you type something
+					in Google Search, it will say "900,000,000 results found," but the results
+					will display for you in just a fraction of a second! There is no way for
+					a computer to scan through a hundred million web sites and determine the
+					most relevant articles in a split second without having efficient data
+					structures. There are plenty of other examples that require smart 
+					programming, but there are too many to list. So now that we understand the
+					importance of data structures for computing, I will discuss in some
+					detail two of the most essential data structures: Arrays and Hashes
+				</p>
+
+
+				<p>
+					<b>Arrays</b> are very commonly used and have a simple concept behind them. Arrays,
+					essentially, are a list of items (can be numbers, or words, or characters, etc)
+					that can quickly be accessed. So if you wanted to list your favorite movies, you 
+					would use an array. If you wanted to have a list of all the people in your class,
+					you would store their names in an array. And so on. The advantage of arrays 
+					are that the computer can INSTANTLY retreive/change an item in the array, whereas,
+					with other data structures, the computer has to perform calculations to get to
+					the item, and THEN it can retrieve/change the item. They are fast because
+					of how they are physically stored in memory, but I don't want to get into
+					too much detail; just understand that they can get/change items fast. However,
+					there is a downside--the list has a certain capacity, say 10 items, and when
+					you exceed that capacity, the computer has to perform extra calculations to 
+					make sure that you can add the 11th item.
+				</p>
+
+				<p>
+					<b>Hashes</b>, also called Dictionaries, are a bit different. They differences
+					lie in how they are stored (slightly) and the data they contain. With arrays, the items
+					are stored by when an item is put in the list. So if I put Sharknado, then Avengers
+					into an array (of movies), it would look something like this: "1. Sharknado, 2. Avengers"
+					and the order will not change. So the programmer tells the computer: "GET THE FIRST/SECOND/*INSERT NUMBER* ITEM
+					IN THE ARRAY" and the computer will print out "SHARKNADO!" or whatever item is 
+					in the 1st/2nd/3rd/etc spot. Hashes are different. A hash stores data in <i>pairs</i>.
+					A good example is if you wanted to store a list of your friends and their favorite 
+					movies, you'd want to use a hash. It would look something like this: <br>
+					{"Jamal"==>"Avengers", "Rebecca"=>"Avatar", "David"=>"Hostel IV"}. <br>
+					To retrieve the favorite movie, the programmer would input to the computer "JAMAL"
+					and the computer would return "AVENGERS", and so on. Rather than ordering things based
+					on where they are in the list, hashes order things based on the first item in the pair (in this case,
+					the names), and when the programmer gives the computer the first item in the pair,
+					the computer retrieves and returns the second item in the pair (in this case, the movie).
+					This has the same advantages and disadvantages as Arrays to my knowledge. 
+				</p>
+
+				<p>
+					So those are the basics of the two data structures. To wrap it up, you'd probably 
+					want to use an array if you have just a normal list of data, EG: {Grass, Trees, Sunflowers} and you'd want to use
+					hashes if you want a list of data pairs, EG: {Grass=>Green, Trees=>Brown, Sun Flowers=>Yellow}
+				</p>
+			</div>
+		</div>
+
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
+</html>
