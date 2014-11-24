@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="../stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
+
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
+
+
+      	<div class="center_part">
+	      	<div class = "left_bar">
+				<ul class ="vertical_left">
+
+					<li><a href = "https://twitter.com/jmoon018" >Twitter</a></li>
+					<li><a href = "https://github.com/jmoon018" >Github link</a></li>
+					<li><a href = "https://linkedin.com/in/jamalmoon/" >LinkedIn</a></li>
+				</ul>
+			</div>
+
+			<div class = "main_body" >
+				<h2>Enumerable#map(!) - What and Why?</h2>
+
+				<p>
+					One problem/issue that commonly arises in programming projects is dealing
+					with lists. Data is commonly stored in these lists and thus it is crucial
+					that programmers understand how to access and modify these data structures.
+					Programmers are armed with many tools to deal with these types of problems,
+					and in this blog post, I am going to discuss one in particular: Enumerable#map
+				</p>	
+
+				<p> <b>What is Enumerable#map???</b> 
+					<br>
+					Enumerable.map is function that loops through the all elements in an array and 
+					creates a new array, with each new element being based on the expression in the block.
+					In the RubyDocs, there is an example as such: <br>
+					<code>(1..4).map { |i| i*i }  #=> [1, 4, 9, 16]</code>
+					<br>
+
+					<i>(1..4)</i> denotes an array, followed by the method name <i>.map</i>. Then
+					a block is created, and the <i>i</i> in </i>|i|</i> means that the element
+					we are iterating on can be accessed by using the <i>i</i> variable. Afterwards,
+					we create an expression <i>i*i</i> which will give us the elements in the new array.
+					Lastly we end the block. So if step through the code, on the first iteration,
+					the new array will push <i>i*i = 1*1 = 1</i>, on the second iteration, the new
+					array will push <i>i*i = 2*2 = 4</i>, and so on. 
+
+					<br>
+					.map! works just like .map, but rather than returning a new array with the
+					modified values, <i>.map!</i> will directly modify the array that's being
+					used and return that instead.
+				</p>
+
+				<p> 
+					<b>Why use .map???</b>
+					.map is a great method to create a new array based on an
+					existing one. Rather than creating a new array, using <i>.each</i> to loop,
+					pushing back each element, etc, we can just use .map. Imagine, for example,
+					that you had a ton of names in an array, but then you decide that you want to
+					format it properly by capitalizing the first letter; you can .map to go through
+					each name and use *name*.capitalize as the expression. .map gives you the power
+					to quickly iterate through an array and return a new array based on the old one
+					but with whatever modifications you want.
+				</p>
+			</div>
+		</div>
+
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
+</html>
