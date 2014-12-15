@@ -11,7 +11,7 @@
 	      	<ul class="headerMenu">
 	      		<li><a href="/">Home</a></li>
 	      		<li><a href="/">About</a></li>
-	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/blog/blog-list.html">Blog</a></li>
 	      		<li><a href="/">Portfolio</a></li>
 	      		<li><a href="/">Contact</a></li>
 	      	</ul>
@@ -46,9 +46,9 @@
 				have four wheels." Ok good, now we have a slightly better idea of what
 				a car is. 
 				<br>
-				Let's focus on its properties: 
-				<ul>
-					<li>it must have energy (or gas tank)</li>
+				Let's focus on its properties: </p>
+				<ul class="listInBlog">
+					<li>it must have energy (or gas)</li>
 					<li>it must have a driver and certain amount of passengers</li>
 					<li>velocity/acceleration</li>
 					<li>turn signals (right/left and on/off)</li>
@@ -56,38 +56,40 @@
 					<li>type of car</li>
 					<li>color of the car</li>
 				</ul>
-				There are probably more properties, but we can stick with these for now.
+				<br>
+				<p>There are probably more properties, but we can stick with these for now.
 
-				Now let's focus on the actions that a car can perform:
-				<ul>
+				Now let's focus on the actions that a car can perform:</p>
+				<ul class="listInBlog">
 					<li>The car can turn on or off</li>
 					<li>Drive (change velocity) or stop</li>
 					<li>Turn right or left (this also affects the signals)</li>
 					<li>Add or remove people</li>
 				</ul>
 
-				We should now have enough properties and methods in order to fulfill
+				<p>We should now have enough properties and methods in order to fulfill
 				the basic definition of a car - a vehicle that can transport people across 
 				roads.</p>
 
 				<code>
 				class Car<br>
-					# this method is called when a car is first created
-					# it MUST be called 'initialize'
-					# the parameters in this method are passed when the car is created
-					def initialize(license, type, color, maxGas)
-						@license = license
-						@type = type
-						@color = color
-						@maxGas = maxGas # in gallons
-						@velocity = 0
-						@rightSignal = false
-						@leftSignal = false
-						@people = [] # array of names of people in the car. First person is the driver
-						@isOn = false
-						@totalDistance = 0 # in miles
-					end
+					# this method is called when a car is first created<br>
+					# it MUST be called 'initialize'<br>
+					# the parameters in this method are passed when the car is created<br>
+					def initialize(license, type, color, maxGas)<br>
+						@license = license<br>
+						@type = type<br>
+						@color = color<br>
+						@maxGas = maxGas # in gallons<br>
+						@velocity = 0<br>
+						@rightSignal = false<br>
+						@leftSignal = false<br>
+						@people = [] # array of names of people in the car. First person is the driver<br>
+						@isOn = false<br>
+						@totalDistance = 0 # in miles<br>
+					end<br>
 				</code>
+				<br>
 				<p>This is the first part of the class. This is the initialization method
 				which is automatically called when you first create an instance of a class. This will
 				give the car default values when you make one, and it will also pass down properties
@@ -98,50 +100,57 @@
 				of the car will simply affect the properties of the car.</p>
 
 				<code>
-					def turnOn
-						@isOn = true
-					end
+						def turnOn <br>
+							@isOn = true <br>
+						end <br>
 
-					def turnOff
-						@isOn = false
-					end
+						<br>
+						def turnOff <br>
+							@isOn = false<br> 
+						end<br>
 
-					# drive straight
-					def drive(dist, mph)
-						@velocity = mph  	   # change velocity
-						@totalDistance += dist # add to the total distance, dont replace
-						@rightSignal = false
-						@leftSignal = false
-					end
+						<br>
+						# drive straight<br>
+						def drive(dist, mph)<br>
+							@velocity = mph  	   # change velocity<br>
+							@totalDistance += dist # add to the total distance, dont replace<br>
+							@rightSignal = false<br>
+							@leftSignal = false<br>
+						end<br>
+						
+						<br>
+						def stop<br>
+							@velocity = 0<br>
+						end<br>
 
-					def stop
-						@velocity = 0
-					end
+						<br>
+						def turnRight<br>
+							@rightSignal = true<br>
+						end<br>
 
-					def turnRight
-						@rightSignal = true
-					end
+						<br>
+						def turnLeft<br>
+							@leftSignal = true<br>
+						end<br>
 
-					def turnLeft
-						@leftSignal = true
-					end
+						<br>
+						def addPeople(name)<br>
+							@people << name <br>
+						end<br>
 
-					def addPeople(name)
-						@people << name 
-					end
-
-					def printState 
-						puts "Car: #{@license}"
-						puts "Type: #{@type}"
-						puts "Color: #{@color}"
-						puts "Car on: #{@isOn}"
-						puts "Current speed: #{@velocity} mph"
-						puts "Right signal on: #{@rightSignal}"
-						puts "Left signal on: #{@leftSignal}"
-						puts "People within: #{@people}"
-						puts "Total distance: #{@totalDistance} miles"
-					end
-				end
+						<br>
+						def printState <br>
+							puts "Car: #{@license}"<br>
+							puts "Type: #{@type}"<br>
+							puts "Color: #{@color}"<br>
+							puts "Car on: #{@isOn}"<br>
+							puts "Current speed: #{@velocity} mph"<br>
+							puts "Right signal on: #{@rightSignal}"<br>
+							puts "Left signal on: #{@leftSignal}"<br>
+							puts "People within: #{@people}"<br>
+							puts "Total distance: #{@totalDistance} miles"<br>
+						end<br>
+				end<br>
 				</code>
 
 				<p>That gives us pretty much all the functionality that we require.
@@ -150,18 +159,18 @@
 				car. Now let us test it.</p>
 
 				<code>
-					bmw = Car.new("ABC281A", "BMW", "Blue", 10) # these parameters are for the initialize method
-					bmw.addPeople("Jamal")
-					bmw.addPeople("Bob")
-					bmw.addPeople("Alice")
-					bmw.turnOn()
-					bmw.turnRight()  # turn right, out of the driveway, onto the road
-					bmw.drive(5, 25) # drive 5 miles at 25mph
-					bmw.printState()
+					bmw = Car.new("ABC281A", "BMW", "Blue", 10) # these parameters are for the initialize method<br>
+					bmw.addPeople("Jamal")<br>
+					bmw.addPeople("Bob")<br>
+					bmw.addPeople("Alice")<br>
+					bmw.turnOn()<br>
+					bmw.turnRight()  # turn right, out of the driveway, onto the road<br>
+					bmw.drive(5, 25) # drive 5 miles at 25mph<br>
+					bmw.printState()<br>
 				</code>
 
-				<p>If we run that chunk of code, the following is output:
-				<ul>
+				<p>If we run that chunk of code, the following is output:</p>
+				<ul class="listInBlog">
 					<li>Car: ABC281</li>
 					<li>Type: BMW</li>
 					<li>Color: Blue</li>
@@ -173,7 +182,7 @@
 					<li>Total distance: 5 miles</li>
 				</ul>
 
-				And that is what we expected too! And of course, we can add more complexity
+				<p>And that is what we expected too! And of course, we can add more complexity
 				to the class and make it more realistic (for example, you can print an error
 				if you try to drive when the car is off). However, this should give you a good
 				idea about how to create a class and give it the desired functionality. Always
