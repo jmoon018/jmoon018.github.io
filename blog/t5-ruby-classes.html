@@ -1,0 +1,193 @@
+<html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="../stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
+
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
+
+
+      	<div class="center_part">
+	      	<div class = "left_bar">
+				<ul class ="vertical_left">
+
+					<li><a href = "https://twitter.com/jmoon018" >Twitter</a></li>
+					<li><a href = "https://github.com/jmoon018" >Github link</a></li>
+					<li><a href = "https://linkedin.com/in/jamalmoon/" >LinkedIn</a></li>
+				</ul>
+			</div>
+
+			<div class = "main_body" >
+				<h2>Ruby Classes</h2>
+
+				<p>In Ruby, classes are used to encapsulate data and methods
+				for later use. Classes are just a convenient way to describe an object
+				by defining what properties the object has and what the object can do.
+				In this post, I will be trying to model a real-world object by using
+				a class in Ruby.</p>
+
+				<p>Let's try to model a real-world object such as a car. Before we begin
+				programming, we must first allocate time to understanding precisely what
+				a car is, what it does, and what properties it has. Start with the basic
+				idea and then go into further detail; a car is "a wheeled, self-powered
+				motor vehicle used for transprotation. Most definitions of the term specify
+				that cars are designed to run primarily no roads, seat 1-8 people, and
+				have four wheels." Ok good, now we have a slightly better idea of what
+				a car is. 
+				<br>
+				Let's focus on its properties: 
+				<ul>
+					<li>it must have energy (or gas tank)</li>
+					<li>it must have a driver and certain amount of passengers</li>
+					<li>velocity/acceleration</li>
+					<li>turn signals (right/left and on/off)</li>
+					<li>license plate</li>
+					<li>type of car</li>
+					<li>color of the car</li>
+				</ul>
+				There are probably more properties, but we can stick with these for now.
+
+				Now let's focus on the actions that a car can perform:
+				<ul>
+					<li>The car can turn on or off</li>
+					<li>Drive (change velocity) or stop</li>
+					<li>Turn right or left (this also affects the signals)</li>
+					<li>Add or remove people</li>
+				</ul>
+
+				We should now have enough properties and methods in order to fulfill
+				the basic definition of a car - a vehicle that can transport people across 
+				roads.</p>
+
+				<code>
+				class Car<br>
+					# this method is called when a car is first created
+					# it MUST be called 'initialize'
+					# the parameters in this method are passed when the car is created
+					def initialize(license, type, color, maxGas)
+						@license = license
+						@type = type
+						@color = color
+						@maxGas = maxGas # in gallons
+						@velocity = 0
+						@rightSignal = false
+						@leftSignal = false
+						@people = [] # array of names of people in the car. First person is the driver
+						@isOn = false
+						@totalDistance = 0 # in miles
+					end
+				</code>
+				<p>This is the first part of the class. This is the initialization method
+				which is automatically called when you first create an instance of a class. This will
+				give the car default values when you make one, and it will also pass down properties
+				that you can specify when you create the car (such as the license plate #, type of car, etc).
+				</p>
+
+				<p>Now we have to add the methods that allow this car to function. Generally, the methods
+				of the car will simply affect the properties of the car.</p>
+
+				<code>
+					def turnOn
+						@isOn = true
+					end
+
+					def turnOff
+						@isOn = false
+					end
+
+					# drive straight
+					def drive(dist, mph)
+						@velocity = mph  	   # change velocity
+						@totalDistance += dist # add to the total distance, dont replace
+						@rightSignal = false
+						@leftSignal = false
+					end
+
+					def stop
+						@velocity = 0
+					end
+
+					def turnRight
+						@rightSignal = true
+					end
+
+					def turnLeft
+						@leftSignal = true
+					end
+
+					def addPeople(name)
+						@people << name 
+					end
+
+					def printState 
+						puts "Car: #{@license}"
+						puts "Type: #{@type}"
+						puts "Color: #{@color}"
+						puts "Car on: #{@isOn}"
+						puts "Current speed: #{@velocity} mph"
+						puts "Right signal on: #{@rightSignal}"
+						puts "Left signal on: #{@leftSignal}"
+						puts "People within: #{@people}"
+						puts "Total distance: #{@totalDistance} miles"
+					end
+				end
+				</code>
+
+				<p>That gives us pretty much all the functionality that we require.
+				We have enough methods to navigate on the road, add people to the car,
+				drive, switch lanes, and enough propeties to correctly identify the
+				car. Now let us test it.</p>
+
+				<code>
+					bmw = Car.new("ABC281A", "BMW", "Blue", 10) # these parameters are for the initialize method
+					bmw.addPeople("Jamal")
+					bmw.addPeople("Bob")
+					bmw.addPeople("Alice")
+					bmw.turnOn()
+					bmw.turnRight()  # turn right, out of the driveway, onto the road
+					bmw.drive(5, 25) # drive 5 miles at 25mph
+					bmw.printState()
+				</code>
+
+				<p>If we run that chunk of code, the following is output:
+				<ul>
+					<li>Car: ABC281</li>
+					<li>Type: BMW</li>
+					<li>Color: Blue</li>
+					<li>Car on:  true</li>
+					<li>Current speed: 25 mph</li>
+					<li>Right signal on: false </li>
+					<li>Left signal on: false </li>
+					<li>People within: Jamal, Bob, Alice</li>
+					<li>Total distance: 5 miles</li>
+				</ul>
+
+				And that is what we expected too! And of course, we can add more complexity
+				to the class and make it more realistic (for example, you can print an error
+				if you try to drive when the car is off). However, this should give you a good
+				idea about how to create a class and give it the desired functionality. Always
+				start with an idea, detail / psuedocode what you want it to do, and then
+				program it step by step. Test it thoroughly to ensure you get the results you want --
+				you wouldn't want a fancy-looking, $20,000 car that doesn't turn on, would you?
+				</p>
+			</div>
+		</div>
+
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
+</html>

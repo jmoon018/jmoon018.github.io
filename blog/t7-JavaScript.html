@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="../stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
+
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="blog/t2-css-design.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
+
+
+      	<div class="center_part">
+	      	<div class = "left_bar">
+				<ul class ="vertical_left">
+
+					<li><a href = "https://twitter.com/jmoon018" >Twitter</a></li>
+					<li><a href = "https://github.com/jmoon018" >Github link</a></li>
+					<li><a href = "https://linkedin.com/in/jamalmoon/" >LinkedIn</a></li>
+				</ul>
+			</div>
+
+			<div class = "main_body" >
+				<h2>JavaScript vs. Ruby</h2>
+
+				<p>There are many differences and similarities between JavaScript and ruby,
+				and in this blog post, I will be discussing some immediate discrepencies
+				and connections that I noticed. I will then go into detail about "looping."
+				<p>
+
+				<p><b>SYNTAX</b> <br>
+				The first difference I noticed was syntax. In JavaScript, <b>statements</b> are
+				separated by semicolons, whereas in Ruby, newlines separate statements automatically.
+				That means, in JavaScript, you could potentially have a program all on one
+				line, however in practice, there are newlines and tabbings just like Ruby code
+				generally is like. When working with <b>variables</b> in JavaScript, you must
+				type <i>var</i> before the variable name or else it will automatically become
+				a global variable.
+				</p>
+
+				<p><b>OPERATORS</b> <br>
+				There are very many similarities between the basic operations, such as addition,
+				subtraction, modulus, comparison, etc between the two languages. The addition operator
+				can be used to find the sum of two numbers or concatenate strings. The comparison
+				operator always returns true or false and can be used to compare anything (numbers,
+				boolean statements, etc). Due to these similarities, I think it was very easy to begin
+				coding in JavaScript after figuring out the syntax/new methods because the code
+				was otherwise virtually the same. With some practice, it is very simple to translate
+				a chunk of Ruby code to JavaScript code.
+				</p>
+
+				<p><b>LOOPING</b> <br>
+				Looping is essential to many programs. It allows us to iterate over data structures
+				(such as the list-like arrays) and access the content within. It also allows us
+				to automate tasks, such as running a function a certain amount of times; we can
+				run a function, say, 20 times, with a loop in just 3 lines of code, otherwise we
+				would have to manually write the function 20 times, which is messy and time-consuming.
+				Looping is paramount and that is why I will be discussing it into a bit more detail.
+				</p>
+
+				<p>
+				In Ruby, we have access to enumerable methods which automate many tasks for us
+				when working with data that can be iterated over (hashes, arrays, lists, etc). Ruby
+				provides methods and syntax that greatly simplify the process of accessing data
+				easily and manipulating it in virtually any way we please. This is a powerful 
+				advantage of Ruby because it can quicken the development process while making
+				the code clear and easy to understand.  <br>
+
+				In JavaScript, there are many methods we can use to emulate or achieve effects
+				like that of Ruby, but the syntax is not as neat. If we want to iterate nicely
+				over an array, we would have to use a for loop (more lines of code). Methods
+				very much like Ruby's exist in JavaScript for iterating over arrays, but there
+				are some extra things we have to type -- we have to apply functions to the
+				iterations, which is kinda weird. If we wanted to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">call array.reduce</a>, for example,
+				the syntax would look like so: <br>
+
+				<code>	[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+	  					return previousValue + currentValue;});
+				</code>
+
+				<br>
+				Eeek, not so pretty, huh? Looping in Ruby is a bit more superior, but it is important
+				to note that JavaScript can still provide the same functionality, it just requires
+				a little bit more work.
+				</p>
+			</div>
+		</div>
+
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
+</html>
