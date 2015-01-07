@@ -44,7 +44,9 @@ var empty; // a variable, called empty, which is undefined (it is neither a stri
 
 Note: you cannot create two variables with the same name
 
-JavaScript Objects are similar to real life objects. They have properties and you can also do things to the objects. In JavaScript, doing something to an object can be described as using a method on an object.
+JavaScript Objects are similar to real life objects. They have properties and you can also do things
+ to the objects. In JavaScript, doing something to an object can be described as using a method on 
+ an object.
 
 Create a JavaScript Object with:
 Object Literal: Most common way to create an object
@@ -62,7 +64,8 @@ var person = new Object ();
 person.name = "Bob";
 person.age = 19;
 
-The Constructor pattern is another way to use the object constructor with ‘this,’ which refers to the global object.
+The Constructor pattern is another way to use the object constructor with ‘this,’ which refers to 
+the global object.
 function Person(theName, theAge) {
 	this.name = theName;
 	this.age = theAge; }
@@ -90,13 +93,16 @@ for (var eachItem in school) {
 console.log(eachItem); // Prints name, location, cohort1
 }
 
-Dot notation is easier to write and read.  Square bracket notation allows access to properties containing special characters and selection of properties using variables.
+Dot notation is easier to write and read.  Square bracket notation allows access to properties containing 
+special characters and selection of properties using variables.
 Ex.
 var school = {name:"Dev Bootcamp", location:"Chicago", cohort1:"Squirrels 2015"}
 console.log(school.name); // Dev Bootcamp
 console.log(school["cohort" + 1]); // Squirrels 2015
 
-hasOwnProperty returns a boolean value indicating if the object being called has a property with the name of the argument in parenthesis. This is useful when enumerating properties of an object in the for...in construct.
+hasOwnProperty returns a boolean value indicating if the object being called has a property with the name 
+of the argument in parenthesis. This is useful when enumerating properties of an object in the for...in
+ construct.
 Ex.
 var school - {schoolName:"Dev Bootcamp"};
 console.log(school.hasOwnProperty("schoolName"));
@@ -106,14 +112,19 @@ Configurable: Specifies whether the property can be deleted or changed.
 Enumerable: Specifies whether the property can be returned ina for/in loop
 Writable: Specifies whether the property can be changed.
 
-Every JavaScript function has a prototype property (empty by default), and you attach properties and methods on this prototype property when implementing inheritance. The prototype property is not enumerable (inaccessible in for/in loop).
+Every JavaScript function has a prototype property (empty by default), and you attach properties and
+ methods on this prototype property when implementing inheritance. The prototype property is not enumerable 
+ (inaccessible in for/in loop).
 
-An object’s prototype attribute points to the object’s "parent"—the object it inherited its properties from. The prototype attribute is normally referred to as the prototype object, and it is set automatically when you create a new object.
+An object’s prototype attribute points to the object’s "parent"—the object it inherited its properties from. 
+The prototype attribute is normally referred to as the prototype object, and it is set automatically when
+ you create a new object.
 				</pre>
 
-				<h2>Object Defitions</h2>
+				<h2>Object Definitions</h2>
 <pre>
-JavaScript functions are defined by either a declaration or an expression. Functions are sequences of instructions that can be triggered by one line of code -- substitute repeated code with functions.
+JavaScript functions are defined by either a declaration or an expression. Functions are sequences of 
+instructions that can be triggered by one line of code -- substitute repeated code with functions.
 
 Function Declarations:
 function functionName (parameter1, parameter2) {
@@ -162,20 +173,24 @@ isArr = Object.prototype.toString.call(arrayiter) == '[object Array]';
 Number Methods
 constructor(): Returns the function that created this object's instance. By default this is the Number object.
 toFixed(): Formats a number with a specific number of digits to the right of the decimal.
-toPrecision(): Defines how many total digits (including digits to the left and right of the decimal) to display of a number.
+toPrecision(): Defines how many total digits (including digits to the left and right of the decimal) 
+to display of a number.
 toString(): Returns the string representation of the number's value.
 
 Boolean Methods
-toSource(): Returns a string containing the source of the Boolean object; you can use this string to create an equivalent object.
+toSource(): Returns a string containing the source of the Boolean object; you can use this string to 
+create an equivalent object.
 toString(): Returns a string of either "true" or "false" depending upon the value of the object.
 
 String Methods
 charAt(index): Returns the character at the specified index.
 concat(string1, string2): Combines the text of two strings and returns a new string.
-indexOf(string): Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.
+indexOf(string): Returns the index within the calling String object of the first occurrence of the 
+specified value, or -1 if not found.
 length(): Returns the length of the string.
 match(regex): Used to match a regular expression against a string.
-replace(findThisStr, replacementStr): Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.
+replace(findThisStr, replacementStr): Used to find a match between a regular expression and a string, 
+and to replace the matched substring with a new substring.
 search(str): Searches the string for a matching string or reg. expression -- returns the index at the match
 slice(index1, index2): Extracts a section of a string and returns a new string.
 split(delimeter): Splits a String object into an array of strings by separating the string into substrings.
@@ -183,15 +198,19 @@ split(delimeter): Splits a String object into an array of strings by separating 
 Array Methods
 concat(array): Returns a new array comprised of this array joined with other array(s) and/or value(s).
 every(): Returns true if every element in this array satisfies the provided testing function.
-filter(): Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+filter(): Creates a new array with all of the elements of this array for which the provided filtering 
+function returns true.
 forEach(): Calls a function for each element in the array.
-indexOf(obj): Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+indexOf(obj): Returns the first (least) index of an element within the array equal to the specified 
+value, or -1 if none is found.
 join(): Joins all elements of an array into a string.
 map(funct): Creates a new array with the results of calling a provided function on every element.
 pop(): Removes the last element from an array and returns that element.
 push(object): Adds one or more elements to the end of an array and returns the new length of the array.
-reduce(function	): Apply a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.
-reverse(): Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.
+reduce(function	): Apply a function simultaneously against two values of the array (from left-to-right) 
+as to reduce it to a single value.
+reverse(): Reverses the order of the elements of an array -- the first becomes the last, and the last 
+becomes the first.
 shift(): Removes the first element from an array and returns that element.
 slice(): Extracts a section of an array and returns a new array.
 sort(): Sorts the elements of an array.
