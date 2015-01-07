@@ -37,10 +37,12 @@ Person.prototype.name = "Bob";
 				<pre>
 
 Variables are containers for data and can be either numbers or words (a string). The syntax is as such:
+<div class="code">
 var *nameOfVariable* = *value*
 var x = 5;  // an integer, called x, containing the value 5
 var message = "Hello world!"; // a string, called message, containing text
 var empty; // a variable, called empty, which is undefined (it is neither a string nor number)
+</div>
 
 Note: you cannot create two variables with the same name
 
@@ -50,33 +52,41 @@ JavaScript Objects are similar to real life objects. They have properties and yo
 
 Create a JavaScript Object with:
 Object Literal: Most common way to create an object
+<div class="code">
 var myObject = {} 		// An empty object
 
 var person = {			// An object with 2 items
 	name: "Bob";
 	age: 19;
 }
+</div>
 
 OR
 
 Object Constructor: The next most common method to create an object
+<div class="code">
 var person = new Object ();
 person.name = "Bob";
 person.age = 19;
+</div>
 
 The Constructor pattern is another way to use the object constructor with ‘this,’ which refers to 
 the global object.
+<div class="code">
 function Person(theName, theAge) {
 	this.name = theName;
 	this.age = theAge; }
 var bob = Person("Bob", 19);
+</div>
 
 The prototype pattern can also be used as an alternative for creating objects. For example:
+<div class="code">
 function Person() { }
 Person.prototype.name = "Bob";
 Person.prototype.age = 19;
 var bob = new Person(); // calls the constructor to create bob with properties name = "Bob" and age = 19
-				</pre>
+</div>
+</pre>
 
 				<h2>Object Properties</h2>
 				<pre>
@@ -88,24 +98,30 @@ square bracket notation: obj[propertyName]
 
 Accessing and Enumerating Properties on Objects using a for/in loop:
 Ex.
+<div class="code">
 var school = {name:"Dev Bootcamp", location:"Chicago", cohort1:"Squirrels 2015"}
 for (var eachItem in school) {
-console.log(eachItem); // Prints name, location, cohort1
+	console.log(eachItem); // Prints name, location, cohort1
 }
+</div>
 
 Dot notation is easier to write and read.  Square bracket notation allows access to properties containing 
 special characters and selection of properties using variables.
 Ex.
+<div class="code">
 var school = {name:"Dev Bootcamp", location:"Chicago", cohort1:"Squirrels 2015"}
 console.log(school.name); // Dev Bootcamp
 console.log(school["cohort" + 1]); // Squirrels 2015
+</div>
 
 hasOwnProperty returns a boolean value indicating if the object being called has a property with the name 
 of the argument in parenthesis. This is useful when enumerating properties of an object in the for...in
  construct.
 Ex.
+<div class="code">
 var school - {schoolName:"Dev Bootcamp"};
 console.log(school.hasOwnProperty("schoolName"));
+</div>
 
 Each data property has 3 Attributes:
 Configurable: Specifies whether the property can be deleted or changed.
@@ -126,26 +142,35 @@ The prototype attribute is normally referred to as the prototype object, and it 
 JavaScript functions are defined by either a declaration or an expression. Functions are sequences of 
 instructions that can be triggered by one line of code -- substitute repeated code with functions.
 
+<div class="code">
 Function Declarations:
 function functionName (parameter1, parameter2) {
 	...
 }
+</div>
 
 Functions can also return values. Here, a function requires two paramaters, and returns their sum.
+<div class="code">
 function doSomething(x, y) {
 	return x + y;
 }
+</div>
 
 Function Expression:
 Function expressions are an alternative to function declarations:
+<div class="code">
 var doSomething = function (x, y) { return x + y; }
+</div>
 
 
 For both methods, you can call the function in the same way:
+<div class="code">
 var sum = doSomething(5, 12);  // 5 + 12 ==> returns 17
+</div>
 
 Object Literals:
 Object literals are essentially a list of key, value pairs. For example:
+<div class="code">
 var Human = {
 	age: 19,	  // must have a comma unless it’s the last pair
 	name: "Jamal",
@@ -158,31 +183,36 @@ Console.log(Human.name + " is " + Human.age + " years old!");
 }; // must end with a semicolon
 Human.age = 20; // the value can be changed
 Human.printInfo(); // prints "Jamal is 20 years old!" to the console
+</div>
 </pre>
 
 
-				<h2>Object Methods</h2>
+				<h2><a hrefObject Methods</h2>
 <pre>
 
 Access a method with the following syntax:
+<div class="code">
 obj.methodName();
+</div>
 
 The most reliable method to see if an object is an array:
+<div class="code">
 isArr = Object.prototype.toString.call(arrayiter) == '[object Array]';
+</div>
 
-Number Methods
+<h4>Number Methods</h4>
 constructor(): Returns the function that created this object's instance. By default this is the Number object.
 toFixed(): Formats a number with a specific number of digits to the right of the decimal.
 toPrecision(): Defines how many total digits (including digits to the left and right of the decimal) 
 to display of a number.
 toString(): Returns the string representation of the number's value.
 
-Boolean Methods
+<h4>Boolean Methods</h4>
 toSource(): Returns a string containing the source of the Boolean object; you can use this string to 
 create an equivalent object.
 toString(): Returns a string of either "true" or "false" depending upon the value of the object.
 
-String Methods
+<h4>String Methods</h4>
 charAt(index): Returns the character at the specified index.
 concat(string1, string2): Combines the text of two strings and returns a new string.
 indexOf(string): Returns the index within the calling String object of the first occurrence of the 
@@ -195,7 +225,7 @@ search(str): Searches the string for a matching string or reg. expression -- ret
 slice(index1, index2): Extracts a section of a string and returns a new string.
 split(delimeter): Splits a String object into an array of strings by separating the string into substrings.
 
-Array Methods
+<h4>Array Methods</h4>
 concat(array): Returns a new array comprised of this array joined with other array(s) and/or value(s).
 every(): Returns true if every element in this array satisfies the provided testing function.
 filter(): Creates a new array with all of the elements of this array for which the provided filtering 
