@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link type="text/css"  rel="stylesheet" href="../stylesheets/stylesheet.css">
+		<title>Jamal Moon</title>
+	</head>
+
+  	<body>
+  		<div id="header">
+	      	<h1>Jamal Moon</h1>
+	      	<p class="subHeader"><a href="https://github.com/jmoon018">My Github Page</a></p>
+	      	<ul class="headerMenu">
+	      		<li><a href="/">Home</a></li>
+	      		<li><a href="/">About</a></li>
+	      		<li><a href="/blog/blog-list.html">Blog</a></li>
+	      		<li><a href="/">Portfolio</a></li>
+	      		<li><a href="/">Contact</a></li>
+	      	</ul>
+      	</div>
+
+
+      	<div class="center_part">
+	      	<div class = "left_bar">
+				<ul class ="vertical_left">
+
+					<li><a href = "https://twitter.com/jmoon018" >Twitter</a></li>
+					<li><a href = "https://github.com/jmoon018" >Github link</a></li>
+					<li><a href = "https://linkedin.com/in/jamalmoon/" >LinkedIn</a></li>
+				</ul>
+			</div>
+
+			<div class = "main_body" >
+				<h2>Big O Complexity and Notation</h2>
+				<br>
+				<p>
+					Nearly all computer programs use algorithms, each with varying complexity; a basic gradebook for teachers would use simple searching
+					algorithms to find students while something like Google Maps uses complex algorithms to find the optimal routes between two locations.
+					For a gradebook example, the algorithm to search for students may not be that efficient, but that doesn't matter because the data
+					size is very small--only a few hundred students. However, Google Maps has to analyze thousands or even millions of potential routes
+					so their algorithms must be very efficient. So an important question follows: how do we determine how efficient an algorithm is, and
+					how do we compare two algorithms? We use Big O notation.
+				</p>
+
+				<p>
+					Big O notation measures how many steps the computer needs in order to complete the algorithm based on how many inputs are
+					provided. The 'input' is just the set of data we are operating on, so if we are searching for a student's name in a gradebook,
+					and there are 240 total students, there would be a total of 240 inputs. If we search for a route in California in Google Maps,
+					the size of the input would be the total number of roads (or crossroads) in California. And so on. We call the number
+					of inputs, 'n'. As 'n', or the number of inputs, increases, so too does the time it takes to complete the algorithm. The purpose
+					of Big O notation is to see how long the algorithm requires based on the inputs, and the notation looks like this: O(n), or 
+					O(n^2), or O(2^n), etc. An algorithm with a running time of O(n) means that the algorithm time scales linearly with the
+					amount of inputs; for example, an arbitrary algorithm can process 1,000 inputs in a second, so with a linear algorithm,
+					it can process 2,000 inputs in two seconds, 3,000 inputs in three seconds, and so on. An algorithm with a running time of
+					O(n^2) scales polynomially with the amount of inputs; for example for 1,000 inputs, it may take one second to process, but
+					for 2,000 inputs, it may need 4 seconds to process, for 3,000 inputs, it may need 9 seconds, and so on. 
+				</p>
+
+				<p>
+					In the previous example, we can see that the first algorithm (the one with the running time of O(n)) can process inputs
+					faster than the algorithm with the running time of O(n^2). The larger the 'n' in the Big O notation, generally, the
+					slower the algorithm is. Since O(n) is smaller than O(n^2), O(n) is generally faster. One thing to note is that Big O
+					notation does not account for constants--so for example, if an algorithm has an input of 100 items, and the algorithm
+					searches through all the inputs twice, the running time would be 2n (where n = 100, the size of the inputs), but when
+					we put it in Big O notation, we ignore the 2 and just write O(n) instead of O(2n). That is a limitation of Big O notation,
+					and an algorithm with large constants (which are not reflected in Big O notation) may leave the algorithm unfeasible.
+					Here is a better comparison of the runtimes:
+				</p>
+
+				<ul class="listInBlog">
+					<li>O(1) - Constant time. The amount of steps the algorithm requires is fixed</li>
+					<li>O(log(n)) - Logarthmic time. Very fast. Scales logarthmically with the input size </li>
+					<li>O(n) - Linear time. Fast. Scales directly with the size of inputs</li>
+					<li>O(n^c) - c is a constant (2,3,4,etc). Polynomial time. </li>
+					<li>O(c^n) - Exponential time. Very very slow.</li>
+					<li>O(n!) - Factorial. Essentially the slowest run time</li>
+				</ul>
+			</div>
+		</div>
+
+      	<div class="footer">
+      		<a href="/">Home</a> • 
+      		<a href="/">Contact</a> • 
+      		<a href="/">Other</a>
+      	</div>
+  	</body>
+</html>
